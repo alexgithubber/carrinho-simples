@@ -1,0 +1,78 @@
+.box {
+  background: #fff;
+  margin: 0 0 30px;
+  border: solid 1px #e6e6e6;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 20px;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+.box .box-header {
+  background: #f7f7f7;
+  margin: -20px -20px 20px;
+  padding: 20px;
+  border-bottom: solid 1px #eeeeee;
+}
+.box .box-header:before,
+.box .box-header:after {
+  content: " ";
+  display: table;
+}
+.box .box-header:after {
+  clear: both;
+}
+.box .box-footer {
+  background: #f7f7f7;
+  margin: 30px -20px -20px;
+  padding: 20px;
+  border-top: solid 1px #eeeeee;
+}
+.box .box-footer:before,
+.box .box-footer:after {
+  content: " ";
+  display: table;
+}
+.box .box-footer:after {
+  clear: both;
+}
+
+/* CSS used here will be applied after bootstrap.css */
+@media only screen and (min-width : 481px) {
+    .row.equal-height {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .row.equal-height > [class*='col-'] {
+        display: flex;
+        flex-direction: column;
+    }
+    .row.equal-height.row:after,
+    .row.equal-height.row:before {
+        display: flex;
+    }
+
+    .row.equal-height > [class*='col-'] > .thumbnail,
+    .row.equal-height > [class*='col-'] > .thumbnail > .caption {
+        display: flex;
+        flex: 1 0 auto;
+        flex-direction: column;
+    }
+    .row.equal-height > [class*='col-'] > .thumbnail > .caption > .flex-text {
+        flex-grow: 1;
+    }
+    .row.equal-height > [class*='col-'] > .thumbnail > img {
+        width: 100%;
+        
+        /* force image's height */
+        /*height: 200px;*/
+
+        /* force image fit inside it's "box" */
+        -webkit-object-fit: cover;
+           -moz-object-fit: cover;
+            -ms-object-fit: cover;
+             -o-object-fit: cover;
+                object-fit: cover;
+    }
+}
