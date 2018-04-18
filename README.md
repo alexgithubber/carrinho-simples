@@ -102,7 +102,7 @@ DB_PASSWORD=
 
 Configure também os arquivos da pasta config (app.php e database.php) para que reflitam as configurações do .env
 
-Finalmente, suba os serviços (Apache, MySQL, etc..) e importe ao MySQL o arquivo que está na raiz (cart.sql), as queries irão criar o banco, as tabelas
+Finalmente, suba os serviços (Apache, MySQL, etc..) e importe ao MySQL o arquivo que está na raiz (carrinho.sql), as queries irão criar o banco, as tabelas
 e alimentar com dados.
 
 ## Testando
@@ -117,4 +117,3 @@ Com os serviços configurados e rodando e o banco 'carrinho' já presente no MyS
 
 * Se não conseguiu rodar o projeto, informe o problema em "Issues", o feedback ajuda a melhorar este README
 * Existem diversas áreas de melhorias possíveis: sistema de cacheamento, search engine, implementar o MVC, substituir o AngularJS por algo mais recente, etc..
-* **Não recomendado para uso em Produção, apenas estudo**

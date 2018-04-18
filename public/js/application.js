@@ -39,8 +39,11 @@ angular.module("cart", ['ngStorage'])
                 };
 
                 $scope.updateItemValues = function (item) {
-                    item.totalPrice = item.price * item.amount;
+                    if (item.amount == undefined) {
+                        item.amount = 1;
+                    }
 
+                    item.totalPrice = item.price * item.amount;
                     $scope.updateCartTotal();
                 };
 
